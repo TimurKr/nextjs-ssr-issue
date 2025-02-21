@@ -1,7 +1,7 @@
 import { BreaksServerRendering } from "@/components/BreakingSSR";
 
 export default async function Home() {
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return (
     <div>
       <h1>Hello World</h1>
