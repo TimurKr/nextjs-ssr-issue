@@ -1,24 +1,18 @@
-import { Switch, SwitchThumb } from "@radix-ui/react-switch";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@radix-ui/react-tooltip";
-
 export function BreaksServerRendering() {
   return (
-    <TooltipProvider delayDuration={0}>
-      <Tooltip>
-        <TooltipTrigger className="pointer-events-auto">
-          <div>
-            <Switch>
-              <SwitchThumb />
-            </Switch>
-          </div>
-        </TooltipTrigger>
-        <TooltipContent>Test</TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <>
+      <button>
+        Outer Button 1
+        <div>
+          <button>Inner button 1</button>
+        </div>
+      </button>
+      <button>
+        Outer Button 2
+        <div>
+          <button>Inner Button 2</button>
+        </div>
+      </button>
+    </>
   );
 }
